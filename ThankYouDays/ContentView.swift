@@ -12,10 +12,19 @@ struct ContentView: View {
         ZStack {
             Color.backgroundIvory
                 .edgesIgnoringSafeArea(.all)
+            VStack{
+                Image("box")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                
+                Button {
+                    print("追加ボタンが押された")
+                } label: {
+                    Text("Thanks Box")
+                            .foregroundStyle(Color.textDarkGray)
+                }
+            }
             
-            Image("box")
-                .resizable()
-                .frame(width: 300, height: 300)
         }
         
        
